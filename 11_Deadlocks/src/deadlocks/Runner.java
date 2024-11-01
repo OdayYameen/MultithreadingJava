@@ -67,7 +67,6 @@ public class Runner {
 
             try {
             	Account.transfer(acc1, acc2, random.nextInt(100));
-//                Account.transfer(acc1, acc2, );
             } finally {
                 lock1.unlock();
                 lock2.unlock();

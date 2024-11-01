@@ -15,18 +15,18 @@ package latches;
  */
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 class Processor implements Runnable {
+    private int id;
     private CountDownLatch latch;
     
-    public Processor(CountDownLatch latch) {
+    public Processor(int id, CountDownLatch latch) {
+        this.id = id;
         this.latch = latch;
     }
     
     public void run() {
-        System.out.println("Started.");
+        System.out.println("Starting: " + id);
         
         try {
             Thread.sleep(3000);
@@ -36,5 +36,6 @@ class Processor implements Runnable {
         }
         
         latch.countDown();
+        System.out.println("Completed: " + id);
     }
 }

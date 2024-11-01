@@ -66,7 +66,6 @@ public class App {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			IOException ex = (IOException) e.getCause();
-
 			System.out.println(ex.getMessage());
 		}
 	}
