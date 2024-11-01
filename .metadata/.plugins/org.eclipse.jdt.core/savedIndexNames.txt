@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+C:\Users\kanastasov\Desktop\MultiThreading\.metadata\.plugins\org.eclipse.jdt.core
-131366971.index
-2755895120.index
